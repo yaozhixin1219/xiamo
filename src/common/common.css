@@ -1,0 +1,47 @@
+/*  1.清除默认样式
+	2.常用的样式
+*/
+/*清除默认样式*/
+* {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  outline: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+input {
+  /*清除默认边框*/
+  border: 0;
+  /*清除轮廓线*/
+  outline: 0;
+}
+button {
+  margin: 0;
+  padding: 0;
+  border: 1px solid transparent;
+  outline: none;
+}
+/*清除浮动*/
+.clearfix:after {
+  content: '';
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+/*为了兼容ie6-7清除浮动*/
+.clearfix {
+  *zoom: 1;
+}
