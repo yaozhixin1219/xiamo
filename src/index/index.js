@@ -1,4 +1,4 @@
-// 头部 搜索框
+// 头部 搜索框**************************************************************************************
 var inner = document.getElementById("inner");
 var column = document.getElementById("column");
 var clis = document.getElementById("column").getElementsByTagName("li");
@@ -27,7 +27,7 @@ for ( var i = 0; i < clis.length; i++ ) {
 
 
 
-// 侧边栏 导航栏切换**********************************************
+// 侧边栏 导航栏切换***********************************************************************************
 var lists = document.getElementById("aside-list").getElementsByClassName("aside-nav-list");
 var divs = document.getElementById("aside-div").getElementsByClassName("aside-nav-div");
 
@@ -106,7 +106,6 @@ function $(names) {
     if (count < 0) {
       count = li_list.length - 1;
     }
-    console.log(count);
     for (var i = 0; i < li_list.length; i++) {
       li_list[i].style = 'display:none;';
       ol_list[i].className = '';
@@ -115,8 +114,8 @@ function $(names) {
     ol_list[count].className = 'active';
   }
 
-  aside.onmouseover = function () { //鼠标划上去，停止轮播
-    clearInterval(timer);
+  aside.onmouseover = function () { //鼠标划入，停止轮播
+    clearInterval(timer);   //清除定时器
   }
   aside.onmouseout = function () { //鼠标划出，继续轮播
     timer = setInterval(auto, 3000); //调用定时器
