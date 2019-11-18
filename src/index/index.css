@@ -176,7 +176,7 @@
   height: 15px;
   position: relative;
   left: 1050px;
-  bottom: 60px;
+  bottom: 530px;
   background-color: yellow;
 }
 .aside #circle li {
@@ -216,10 +216,6 @@
   color: #ffffff;
   font-size: 14px;
   opacity: 0.8;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 1;
 }
 .aside #aside-list .aside-nav-list {
   height: 42px;
