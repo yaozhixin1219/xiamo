@@ -1,19 +1,27 @@
 // 头部 搜索框
-// var sdiv = document.getElementsByClassName("header-nav2-search");
-// var left = document.getElementsByClassName("header-nav2-search-left");
-var slis = document.getElementById("slide").getElementsByTagName("li");
-// left.click = function() {
-//     sdiv.style.border = "#FF6700";
-// }
+var inner = document.getElementById("inner");
+var column = document.getElementById("column");
+var clis = document.getElementById("column").getElementsByTagName("li");
+var button = document.getElementById("button");
 
-    for (var k = 0; k < slis.length; k++) {
-        slis[k].onmouseover = function() {
-            this.style.backgroundColor = "#FF6700";
-        }
-        slis[k].onmouseout = function() {
-            this.style.backgroundColor = "#ffffff";
-        }
+inner.onclick = function() {
+    inner.style.border = "1px solid #FF6700";
+    column.style.display = "block";
+}
+
+button.onclick = function() {
+    inner.style.border = "1px solid #B0B0B0";
+    column.style.display = "none";
+}
+
+for ( var i = 0; i < clis.length; i++ ) {
+    clis[i].onmouseover = function () {
+        this.style.backgroundColor = '#E0FFFF';
     }
+    clis[i].onmouseout = function () {
+        this.style.backgroundColor = "#ffffff";
+    }
+}
 
 
 
@@ -101,7 +109,7 @@ function $(names) {
     console.log(count);
     for (var i = 0; i < li_list.length; i++) {
       li_list[i].style = 'display:none;';
-      ol_list[count].className = '';
+      ol_list[i].className = '';
     }
     li_list[count].style = 'display:block;';
     ol_list[count].className = 'active';
